@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-@Document(indexName = "my_index", type = "user")
+@Document(indexName = "my_user_index", type = "user")
 public class User {
 
     @Id

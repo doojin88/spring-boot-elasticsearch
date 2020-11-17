@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
+import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.query.IndexQuery;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.data.elasticsearch.core.query.SearchQuery;
@@ -28,7 +28,7 @@ public class UserDAOImpl implements UserDAO {
     private String userTypeName;
 
     @Autowired
-    private ElasticsearchTemplate esTemplate;
+    private ElasticsearchOperations esTemplate;
 
     @Override
     public List<User> getAllUsers() {
